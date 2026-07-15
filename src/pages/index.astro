@@ -156,6 +156,13 @@ import Layout from '../layouts/Layout.astro';
   <section class="section">
     <h2>L’intervenant</h2>
     <div class="bio">
+      <img
+        src="/images/philippe-houssin.jpg"
+        alt="Portrait de Philippe Houssin"
+        class="bio-photo"
+        width="600"
+        height="900"
+      />
       <h3>Philippe Houssin — Peps People, founder &amp; trainer</h3>
       <p>
         Façonné par une expérience précoce de l’autonomie et des environnements complexes
@@ -432,6 +439,19 @@ import Layout from '../layouts/Layout.astro';
     }
 
     /* ===== BIO ===== */
+    .bio-photo {
+      float: right;
+      width: min(220px, 40%);
+      height: auto;
+      border-radius: 16px;
+      margin: 0 0 1rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(35, 48, 60, 0.15);
+    }
+    .bio::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
     .bio h3 {
       color: var(--bleu-fonce);
       font-size: 1.2rem;
