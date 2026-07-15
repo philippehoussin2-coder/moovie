@@ -4,8 +4,8 @@ interface Props {
   description?: string;
 }
 const {
-  title = 'moovie',
-  description = 'Projet moovie — construit avec Astro et déployé sur Cloudflare Pages.',
+  title = "Moo'vie — Flow'er your Life",
+  description = "Moo'vie by ActionTypes : un parcours immersif pour développer votre capacité de résilience par le corps et le mouvement. ActionTypes, Somatic Experiencing, Integral Somatic Psychology.",
 } = Astro.props;
 ---
 
@@ -15,22 +15,35 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/logo-moovies-bleu.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
   </head>
   <body>
     <slot />
     <style is:global>
       :root {
-        --bg: #0b0d12;
-        --panel: #141821;
-        --text: #e8ecf3;
-        --muted: #9aa4b2;
-        --accent: #6ea8fe;
-        color-scheme: dark;
+        --bleu: #2b9cd8;
+        --bleu-fonce: #1d7db2;
+        --fuchsia: #e0398d;
+        --violet: #8b2fa8;
+        --orange: #f5a623;
+        --encre: #23303c;
+        --gris: #5c6b7a;
+        --fond: #ffffff;
+        --fond-doux: #f5f9fc;
+        color-scheme: light;
       }
       * {
         box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
       }
       html,
       body {
@@ -38,16 +51,17 @@ const {
         padding: 0;
       }
       body {
-        font-family:
-          system-ui,
-          -apple-system,
-          'Segoe UI',
-          Roboto,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
+        font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+        background: var(--fond);
+        color: var(--encre);
+        line-height: 1.65;
         -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+        letter-spacing: -0.01em;
       }
     </style>
   </body>

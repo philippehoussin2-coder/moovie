@@ -1,109 +1,501 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const buildDate = new Date().toLocaleDateString('fr-FR', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
 ---
 
-<Layout title="moovie — c'est en ligne 🎬">
-  <main>
-    <section class="hero">
-      <p class="badge">✅ Déployé sur Cloudflare Pages</p>
-      <h1>moovie</h1>
-      <p class="lead">
-        Ce site est construit avec <strong>Astro</strong>, hébergé sur
-        <strong>GitHub</strong>, et déployé automatiquement sur
-        <strong>Cloudflare Pages</strong> à chaque modification.
-      </p>
-      <p class="meta">Build du {buildDate}</p>
-    </section>
+<Layout>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-texte">
+        <img src="/images/logo-moovies-bleu.png" alt="Logo Moo'vies" class="logo" />
+        <p class="baseline">Flow’er your Life</p>
+        <h1>Renouez avec le courant de la&nbsp;vie</h1>
+        <p class="pitch">
+          <strong>Moo’vie</strong> est un parcours immersif qui développe votre capacité de
+          <strong>résilience</strong> — par le corps, le mouvement et la puissance qui l’anime,
+          via l’approche <strong>ActionTypes®</strong>.
+        </p>
+        <div class="cta-groupe">
+          <a href="#parcours" class="cta">Découvrir le parcours</a>
+          <a href="#contact" class="cta cta-secondaire">Nous contacter</a>
+        </div>
+      </div>
+      <div class="hero-visuel">
+        <img src="/images/splash-moovies.jpg" alt="Explosion de couleurs Moo'vies" />
+      </div>
+    </div>
+  </header>
 
-    <section class="cards">
-      <article>
-        <h2>🚀 Déploiement auto</h2>
-        <p>Chaque <code>git push</code> déclenche un nouveau build et une mise en ligne, sans manipulation.</p>
-      </article>
-      <article>
-        <h2>🧩 Astro</h2>
-        <p>Des pages rapides en HTML, avec des composants réutilisables et un peu de JS si besoin.</p>
-      </article>
-      <article>
-        <h2>🌍 Cloudflare</h2>
-        <p>Distribué sur le réseau mondial de Cloudflare : rapide partout, gratuit pour commencer.</p>
-      </article>
-    </section>
-  </main>
+  <!-- ===== 3 DIMENSIONS ===== -->
+  <section class="dimensions">
+    <div class="dimension" style="--c: var(--bleu)">
+      <span class="dim-num">01</span>
+      <h3>Physique</h3>
+      <p>Le corps comme porte d’entrée : sensations, motricité, physiologie.</p>
+    </div>
+    <div class="dimension" style="--c: var(--fuchsia)">
+      <span class="dim-num">02</span>
+      <h3>Émotionnelle</h3>
+      <p>Accueillir, exprimer et intégrer ce qui est inscrit en profondeur.</p>
+    </div>
+    <div class="dimension" style="--c: var(--violet)">
+      <span class="dim-num">03</span>
+      <h3>Mentale</h3>
+      <p>Dépasser les conditionnements, croyances et jugements hérités.</p>
+    </div>
+  </section>
+
+  <!-- ===== C'EST QUOI ===== -->
+  <section class="section" id="parcours">
+    <h2>C’est quoi, Moo’vie&nbsp;?</h2>
+    <p class="intro">
+      Un parcours unique qui aide les praticien·nes accompagnant par le corps à individualiser
+      le développement de la résilience de leurs clients. En encadrant ce processus, nous vous
+      permettons d’exprimer et de faire émerger, au travers du corps, les impacts de votre
+      histoire personnelle.
+    </p>
+    <div class="approches">
+      <div class="approche">
+        <h3>ActionTypes®</h3>
+        <p>L’approche des préférences motrices et cognitives qui libère l’expression naturelle du potentiel de chacun·e.</p>
+      </div>
+      <div class="approche">
+        <h3>Somatic Experiencing</h3>
+        <p>La résolution par le corps des états physiologiques de survie, de haute activation et de figement.</p>
+      </div>
+      <div class="approche">
+        <h3>Integral Somatic Psychology</h3>
+        <p>L’intégration globale des émotions dans le corps pour une transformation durable.</p>
+      </div>
+    </div>
+    <aside class="avertissement">
+      <p>
+        Ce parcours <strong>n’est pas</strong> un enseignement de connaissances théoriques, ni
+        une formation de recettes toutes faites. C’est une <strong>expérience</strong> à vivre.
+      </p>
+    </aside>
+  </section>
+
+  <!-- ===== PEDAGOGIE ===== -->
+  <section class="section section-douce">
+    <h2>Notre pédagogie</h2>
+    <div class="deux-colonnes">
+      <div>
+        <h3>Par et dans l’action</h3>
+        <p>
+          Nous avons tous surmonté et apprivoisé la complexité de marcher, nager, faire du
+          vélo, nous intégrer socialement… par l’action. Ce parcours réveille ces processus
+          naturels d’auto-régulation et d’auto-intégration.
+        </p>
+      </div>
+      <div>
+        <h3>Portés par le collectif</h3>
+        <p>
+          L’apprentissage est porté par l’interaction des individus avec eux-mêmes et par une
+          intention claire : que chacun·e soit et se sente soutenu·e par le groupe, animé et
+          supervisé par des accompagnants au vécu professionnel avéré et complémentaire.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OBJECTIFS ===== -->
+  <section class="section">
+    <h2>Objectifs</h2>
+    <ul class="objectifs">
+      <li>
+        <strong>S’entraîner à dialoguer</strong> avec le corps, les émotions, les sensations et
+        la physiologie des états de haute activation et de figement.
+      </li>
+      <li>
+        <strong>Découvrir les fondamentaux</strong> de l’approche Moo’vie par ActionTypes.
+      </li>
+      <li>
+        <strong>Libérer et apprivoiser par l’expérience</strong>, via un processus intégratif,
+        les différents niveaux d’intégration des évènements de vie.
+      </li>
+      <li>
+        <strong>Transformer</strong> les états physiologiques de survie, les croyances et les
+        jugements acquis et hérités.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== INFOS PRATIQUES ===== -->
+  <section class="section section-douce">
+    <h2>Le parcours en pratique</h2>
+    <div class="infos">
+      <div class="info">
+        <span class="info-label">Format</span>
+        <span class="info-valeur">3 × 3 jours</span>
+        <p>Une expérience immersive et modélisante, en résidentiel.</p>
+      </div>
+      <div class="info">
+        <span class="info-label">Groupe</span>
+        <span class="info-valeur">10 personnes max.</span>
+        <p>Un cadre sécurisé, propice à l’écoute de soi et de son corps.</p>
+      </div>
+      <div class="info">
+        <span class="info-label">Accompagnement</span>
+        <span class="info-valeur">Continu</span>
+        <p>Groupe de pairs WhatsApp + coaching bimensuel d’1h pendant tout le parcours et le mois qui suit.</p>
+      </div>
+      <div class="info">
+        <span class="info-label">Public</span>
+        <span class="info-valeur">Praticien·nes ATA</span>
+        <p>Prérequis : être praticien·ne certifié·e ActionTypes, prêt·e à accueillir ses blessures.</p>
+      </div>
+    </div>
+    <p class="tarif">
+      Tarif : <strong>2 970 € HT</strong> par participant·e — convention de formation possible.
+      <br />Prochaines dates : <a href="#contact">contactez-nous</a>.
+    </p>
+  </section>
+
+  <!-- ===== INTERVENANT ===== -->
+  <section class="section">
+    <h2>L’intervenant</h2>
+    <div class="bio">
+      <h3>Philippe Houssin — Peps People, founder &amp; trainer</h3>
+      <p>
+        Façonné par une expérience précoce de l’autonomie et des environnements complexes
+        (pilotage avion dès 14 ans, navigation au large), Philippe accompagne depuis 2001 des
+        individus et des collectifs autour de l’autonomie, de la confiance et de la résilience.
+        En 2009, il fonde <strong>Peps People</strong>, qui accompagne la réalisation de soi en
+        entreprise et dans le sport au travers du prisme des talents naturels.
+      </p>
+      <p>
+        Praticien certifié et formateur à l’approche <strong>ActionTypes® depuis 2011</strong>,
+        formé au Somatic Experiencing, à l’Integral Somatic Psychology, à la cohérence
+        cardiaque, à la libération des réflexes archaïques… il porte une approche globale et
+        intégrative des individus comme des écosystèmes.
+      </p>
+      <p class="bio-note">
+        Le développement de Moo’vies « Powered by ActionTypes » est accompagné par un comité de
+        suivi énergisé par Bertrand Théraulaz, cofondateur de l’approche ActionTypes, et
+        Philippe Houssin.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <footer class="contact" id="contact">
+    <h2>Informations &amp; inscriptions</h2>
+    <p class="contact-nom">PEPS PEOPLE</p>
+    <p>3 domaine St Bruno — 56450 Surzur</p>
+    <p>
+      <a href="mailto:philippe.houssin2@gmail.com">philippe.houssin2@gmail.com</a> ·
+      <a href="tel:+33617766843">+33 6 17 76 68 43</a>
+    </p>
+    <p>
+      <a href="https://www.pepspeople.fr/" target="_blank" rel="noopener">pepspeople.fr</a>
+    </p>
+    <p class="signature">Moo’vies — Flow’er your Life · Powered by ActionTypes®</p>
+  </footer>
 
   <style>
-    main {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 5rem;
-    }
+    /* ===== HERO ===== */
     .hero {
-      text-align: center;
-      padding: 3rem 0 2.5rem;
+      padding: 3.5rem 1.5rem 4rem;
+      background: linear-gradient(180deg, #fff 0%, var(--fond-doux) 100%);
     }
-    .badge {
-      display: inline-block;
-      background: rgba(110, 168, 254, 0.12);
-      color: var(--accent);
-      border: 1px solid rgba(110, 168, 254, 0.3);
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
+    .hero-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .logo {
+      width: 130px;
+      height: auto;
+    }
+    .baseline {
+      color: var(--fuchsia);
       font-weight: 600;
-      margin: 0 0 1.5rem;
+      font-size: 1.15rem;
+      font-style: italic;
+      margin: 0.4rem 0 1.6rem;
     }
     h1 {
-      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      font-weight: 700;
       margin: 0 0 1rem;
-      letter-spacing: -0.03em;
-      background: linear-gradient(120deg, #e8ecf3, #6ea8fe);
+      background: linear-gradient(100deg, var(--bleu-fonce), var(--fuchsia) 70%, var(--violet));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .lead {
-      font-size: 1.2rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 1rem;
+    .pitch {
+      font-size: 1.15rem;
+      color: var(--gris);
+      margin: 0 0 1.8rem;
+      max-width: 34rem;
     }
-    .meta {
-      font-size: 0.85rem;
-      color: var(--muted);
-      opacity: 0.7;
+    .cta-groupe {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
     }
-    .cards {
+    .cta {
+      display: inline-block;
+      background: var(--bleu);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(43, 156, 216, 0.35);
+    }
+    .cta-secondaire {
+      background: transparent;
+      color: var(--bleu-fonce);
+      border: 2px solid var(--bleu);
+    }
+    .hero-visuel img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+    }
+
+    /* ===== DIMENSIONS ===== */
+    .dimensions {
+      max-width: 1040px;
+      margin: -2rem auto 0;
+      padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      position: relative;
+    }
+    .dimension {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.6rem;
+      box-shadow: 0 10px 30px rgba(35, 48, 60, 0.08);
+      border-top: 4px solid var(--c);
+    }
+    .dim-num {
+      font-weight: 700;
+      color: var(--c);
+      font-size: 0.9rem;
+    }
+    .dimension h3 {
+      margin: 0.3rem 0 0.5rem;
+      font-size: 1.25rem;
+    }
+    .dimension p {
+      margin: 0;
+      color: var(--gris);
+      font-size: 0.95rem;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 2rem;
+    }
+    .section-douce {
+      max-width: none;
+      background: var(--fond-doux);
+      margin-top: 3rem;
+      padding: 3.5rem 1.5rem;
+    }
+    .section-douce > * {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      color: var(--bleu-fonce);
+      margin: 0 0 1.2rem;
+    }
+    .intro {
+      font-size: 1.1rem;
+      color: var(--gris);
+    }
+    .approches {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
       margin-top: 2rem;
     }
-    article {
-      background: var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+    .approche {
+      background: #fff;
+      border: 1px solid rgba(43, 156, 216, 0.25);
       border-radius: 14px;
-      padding: 1.5rem;
+      padding: 1.4rem;
     }
-    article h2 {
-      margin: 0 0 0.6rem;
-      font-size: 1.15rem;
+    .approche h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.5rem;
+      color: var(--fuchsia);
     }
-    article p {
+    .approche p {
       margin: 0;
-      color: var(--muted);
-      font-size: 0.97rem;
+      font-size: 0.92rem;
+      color: var(--gris);
     }
-    code {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 0.1rem 0.4rem;
-      border-radius: 5px;
-      font-size: 0.9em;
+    .avertissement {
+      margin-top: 2rem;
+      background: linear-gradient(100deg, rgba(245, 166, 35, 0.12), rgba(224, 57, 141, 0.1));
+      border-radius: 14px;
+      padding: 1.2rem 1.5rem;
+    }
+    .avertissement p {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .deux-colonnes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .deux-colonnes h3 {
+      color: var(--violet);
+      font-size: 1.15rem;
+      margin: 0 0 0.5rem;
+    }
+    .deux-colonnes p {
+      margin: 0;
+      color: var(--gris);
+    }
+
+    /* ===== OBJECTIFS ===== */
+    .objectifs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.9rem;
+    }
+    .objectifs li {
+      background: #fff;
+      border-left: 4px solid var(--bleu);
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 4px 16px rgba(35, 48, 60, 0.06);
+      padding: 1rem 1.3rem;
+      color: var(--gris);
+    }
+    .objectifs li strong {
+      color: var(--encre);
+    }
+
+    /* ===== INFOS ===== */
+    .infos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    .info {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.4rem;
+      box-shadow: 0 4px 16px rgba(35, 48, 60, 0.06);
+    }
+    .info-label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--orange);
+    }
+    .info-valeur {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--bleu-fonce);
+      margin: 0.2rem 0 0.4rem;
+    }
+    .info p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--gris);
+    }
+    .tarif {
+      margin-top: 1.8rem;
+      text-align: center;
+      font-size: 1.08rem;
+      color: var(--gris);
+    }
+    .tarif a {
+      color: var(--fuchsia);
+      font-weight: 600;
+    }
+
+    /* ===== BIO ===== */
+    .bio h3 {
+      color: var(--bleu-fonce);
+      font-size: 1.2rem;
+      margin: 0 0 0.8rem;
+    }
+    .bio p {
+      color: var(--gris);
+    }
+    .bio-note {
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(35, 48, 60, 0.1);
+      padding-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      margin-top: 4rem;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(115deg, var(--bleu-fonce), var(--violet) 55%, var(--fuchsia));
+    }
+    .contact h2 {
+      color: #fff;
+    }
+    .contact p {
+      margin: 0.3rem 0;
+    }
+    .contact-nom {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .contact a {
+      color: #fff;
+      font-weight: 600;
+    }
+    .signature {
+      margin-top: 2rem;
+      opacity: 0.75;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 760px) {
+      .hero-inner,
+      .deux-colonnes,
+      .infos {
+        grid-template-columns: 1fr;
+      }
+      .dimensions,
+      .approches {
+        grid-template-columns: 1fr;
+      }
+      .hero-visuel {
+        order: -1;
+      }
+      .hero-visuel img {
+        max-width: 320px;
+        margin: 0 auto;
+        display: block;
+      }
     }
   </style>
 </Layout>
