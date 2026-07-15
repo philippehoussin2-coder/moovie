@@ -8,12 +8,13 @@ import Layout from '../layouts/Layout.astro';
 >
   <!-- ===== HERO ===== -->
   <header class="hero">
-    <p class="surtitre">Le voyage Moo’vie</p>
+    <p class="surtitre">Le voyage Moo’vie — retrouver la joie d’être</p>
     <h1>Comment ça se passe&nbsp;?</h1>
     <p class="pitch">
       Un parcours Moo’vie, c’est une <strong>navigation en trois escales</strong>, guidée par
       votre dynamique d’expression révélée par l’approche ActionTypes®. Pas de programme
-      plaqué : le voyage s’adapte à chaque équipage. Voici à quoi ressemble la traversée.
+      plaqué : le voyage s’adapte à chaque équipage. Le cap&nbsp;? Retrouver
+      <strong>le regard émerveillé de l’enfant</strong>.
     </p>
   </header>
 
@@ -38,6 +39,22 @@ import Layout from '../layouts/Layout.astro';
         <p>Créatif et adaptatif — au quotidien, pas seulement en stage.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ===== ENTREZ DANS LA DANSE ===== -->
+  <section class="section">
+    <p class="etiquette">L’esprit du voyage</p>
+    <h2>Entrez dans la danse — osez laisser le corps s’exprimer</h2>
+    <blockquote class="citation-article">
+      « Ici, point de protocole formel intrusif, point de conformité rigide et prévisible : la
+      place est laissée à <strong>l’émergence instinctive et intuitive</strong>, guidée par une
+      écoute fine et organique de l’être intérieur. »
+    </blockquote>
+    <p>
+      Une éthique fondée sur <strong>l’empowerment, l’indépendance et la
+      co-responsabilité</strong> — inspirée entre autres de l’andragogie — est transmise tout
+      au long des étapes du voyage.
+    </p>
   </section>
 
   <!-- ===== LES 3 ESCALES ===== -->
@@ -79,13 +96,30 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ===== VIDER LA TASSE ===== -->
+  <section class="section">
+    <p class="etiquette">Le cheminement</p>
+    <h2>Vider la tasse avant de la remplir</h2>
+    <p>
+      Les scories du passé jonchent notre chemin de vie. Le cheminement Moo’vie s’opère par un
+      <strong>dépouillement des scories héritées du passé</strong>, qui permet à chacun·e de
+      faire émerger ses <strong>aspirations les plus profondes</strong>.
+    </p>
+    <p>
+      Ce faisant, les voyageurs au cœur du mouvement continuent d’affûter leur sensibilité et
+      leurs capacités d’écoute — pour percevoir
+      <strong>ce que le corps leur chuchote, au-delà des mots</strong>.
+    </p>
+  </section>
+
   <!-- ===== UNE JOURNÉE TYPE ===== -->
   <section class="section">
     <p class="etiquette">Le rythme à bord</p>
     <h2>À quoi ressemble une journée&nbsp;?</h2>
     <p class="intro-douce">
       Chaque journée suit un rythme itératif, inspiré des méthodes agiles — et surtout du
-      vivant&nbsp;:
+      vivant. Un programme qui mêle <strong>Art, Mouvement et Nature</strong>, et apprend à
+      domestiquer la force des pensées en faisant <strong>silence cognitif</strong>&nbsp;:
     </p>
     <ol class="journee">
       <li>
@@ -173,6 +207,10 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ===== CTA ===== -->
   <section class="section section-cta">
+    <blockquote class="punchline">
+      « Thérapeutes, coachs, entraîneurs, éducateurs&nbsp;: pansez d’abord vos plaies avant de
+      penser à aider les autres à panser les leurs. »
+    </blockquote>
     <h2>Prêt·e à embarquer&nbsp;?</h2>
     <a href="/parcours" class="cta-grand">Voir les dates et réserver ma place</a>
     <p class="ou-question">
@@ -276,6 +314,31 @@ import Layout from '../layouts/Layout.astro';
     .cardinal p {
       margin: 0;
       font-size: 0.9rem;
+    }
+
+    /* Citations de l'article */
+    .citation-article {
+      background: var(--fond-doux);
+      border-left: 4px solid var(--fuchsia);
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0;
+      padding: 1.3rem 1.6rem;
+      font-size: 1.12rem;
+      color: var(--encre);
+      font-style: italic;
+    }
+    .citation-article strong {
+      color: var(--fuchsia);
+    }
+    .punchline {
+      max-width: 34rem;
+      margin: 0 auto 2.2rem;
+      font-size: 1.18rem;
+      font-style: italic;
+      color: var(--violet);
+      border: none;
+      padding: 0;
+      line-height: 1.7;
     }
 
     /* Escales */
