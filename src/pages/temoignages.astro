@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Témoignages — Moo'vie"
+  description="Ce que les participant·es du parcours Moo'vie en disent : transformations vécues, résilience retrouvée, accompagnements enrichis."
+>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <h1>Ils ont vécu le parcours</h1>
+    <p class="pitch">
+      Moo’vie ne s’explique pas, il se vit. Voici ce qu’en disent celles et ceux qui ont fait
+      le voyage.
+    </p>
+  </header>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section class="section">
+    <article class="temoignage temoignage-principal">
+      <p class="temoignage-texte">
+        «&nbsp;Ce parcours a <strong>totalement changé ma vie</strong> : ma façon de la voir,
+        mon rapport à la naissance, à la mort, ma façon de coacher et d’accompagner chaque être
+        humain qui est en demande. Mais le plus important, c’est surtout qu’aujourd’hui je sais
+        que j’ai «&nbsp;<strong>NO LIMIT</strong>&nbsp;», tant sur le plan personnel que sur le
+        plan professionnel. Mon seul objectif&nbsp;: <strong>JOUER DE LA VIE</strong>.&nbsp;»
+      </p>
+      <footer class="temoignage-auteur">
+        <span class="auteur-nom">Antoine</span>
+        <span class="auteur-detail">Coach professionnel — bilan de fin de parcours</span>
+      </footer>
+    </article>
+
+    <div class="photo-collectif">
+      <img
+        src="/images/atelier-moovie.jpg"
+        alt="Un groupe Moo'vie en session : participants en cercle au sol"
+        width="900"
+        height="900"
+      />
+      <p class="photo-legende">Le collectif Moo’vie en session — le groupe comme espace de sécurité.</p>
+    </div>
+
+    <div class="a-venir">
+      <h2>D’autres voix arrivent bientôt</h2>
+      <p>
+        Chaque promotion est limitée à 10 personnes : les témoignages se recueillent au rythme
+        des parcours. De nouvelles voix — thérapeutes, coachs, entraîneurs, praticien·nes du
+        corps — seront publiées ici prochainement.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section-cta">
+    <h2>Et si le prochain témoignage était le vôtre&nbsp;?</h2>
+    <a href="/parcours" class="cta-grand">Découvrir le parcours</a>
+    <p class="ou-contact">
+      Vous avez vécu Moo’vie et souhaitez partager votre expérience&nbsp;?
+      <a href="mailto:philippe.houssin2@gmail.com?subject=Mon%20t%C3%A9moignage%20Moo'vie">Écrivez-nous</a>.
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pied">
+    <p>
+      PEPS PEOPLE — 3 domaine St Bruno, 56450 Surzur ·
+      <a href="mailto:philippe.houssin2@gmail.com">philippe.houssin2@gmail.com</a> ·
+      <a href="https://www.pepspeople.fr/" target="_blank" rel="noopener">pepspeople.fr</a>
+    </p>
+    <p class="signature">Moo’vies — Flow’er your Life · Powered by ActionTypes®</p>
+  </footer>
+
+  <style>
+    .hero {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+      margin: 0 0 1rem;
+      background: linear-gradient(100deg, var(--bleu-fonce), var(--fuchsia) 70%, var(--violet));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .pitch {
+      font-size: 1.12rem;
+      color: var(--gris);
+      margin: 0;
+    }
+
+    .section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    .temoignage {
+      background: linear-gradient(115deg, var(--bleu-fonce), var(--violet));
+      color: #fff;
+      border-radius: 20px;
+      padding: 2.2rem;
+      box-shadow: 0 16px 40px rgba(43, 47, 90, 0.25);
+    }
+    .temoignage-texte {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 0 0 1.4rem;
+      font-style: italic;
+    }
+    .temoignage-texte strong {
+      color: #ffd58a;
+    }
+    .temoignage-auteur {
+      display: flex;
+      flex-direction: column;
+    }
+    .auteur-nom {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .auteur-detail {
+      font-size: 0.88rem;
+      opacity: 0.8;
+    }
+
+    .photo-collectif {
+      margin: 2.5rem 0;
+    }
+    .photo-collectif img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 34px rgba(35, 48, 60, 0.15);
+    }
+    .photo-legende {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--gris);
+      margin-top: 0.7rem;
+      font-style: italic;
+    }
+
+    .a-venir {
+      background: var(--fond-doux);
+      border-radius: 16px;
+      padding: 1.8rem;
+      text-align: center;
+    }
+    .a-venir h2 {
+      font-size: 1.25rem;
+      color: var(--bleu-fonce);
+      margin: 0 0 0.6rem;
+    }
+    .a-venir p {
+      color: var(--gris);
+      margin: 0;
+    }
+
+    .section-cta {
+      text-align: center;
+      padding-top: 3rem;
+    }
+    .section-cta h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: var(--encre);
+      margin: 0 0 1.5rem;
+    }
+    .cta-grand {
+      display: inline-block;
+      background: linear-gradient(100deg, var(--fuchsia), var(--violet));
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.95rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(224, 57, 141, 0.35);
+    }
+    .ou-contact {
+      margin-top: 1.4rem;
+      color: var(--gris);
+      font-size: 0.95rem;
+    }
+    .ou-contact a {
+      color: var(--fuchsia);
+      font-weight: 600;
+    }
+
+    .pied {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--gris);
+      font-size: 0.9rem;
+    }
+    .pied a {
+      color: var(--bleu-fonce);
+      font-weight: 600;
+    }
+    .signature {
+      margin-top: 0.6rem;
+      font-style: italic;
+      opacity: 0.8;
+    }
+  </style>
+</Layout>

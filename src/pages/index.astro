@@ -7,7 +7,6 @@ import Layout from '../layouts/Layout.astro';
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-texte">
-        <img src="/images/logo-moovies-bleu.png" alt="Logo Moo'vies" class="logo" />
         <p class="baseline">Flow’er your Life</p>
         <h1>Renouez avec le courant de la&nbsp;vie</h1>
         <p class="pitch">
@@ -74,6 +73,9 @@ import Layout from '../layouts/Layout.astro';
         une formation de recettes toutes faites. C’est une <strong>expérience</strong> à vivre.
       </p>
     </aside>
+    <p class="en-savoir-plus">
+      <a href="/cest-quoi">Découvrir les fondements de l’approche : signatures motrices et intégration des histoires de vie →</a>
+    </p>
   </section>
 
   <!-- ===== PEDAGOGIE ===== -->
@@ -142,8 +144,8 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="info">
         <span class="info-label">Public</span>
-        <span class="info-valeur">Praticien·nes ATA</span>
-        <p>Prérequis : être praticien·ne certifié·e ActionTypes, prêt·e à accueillir ses blessures.</p>
+        <span class="info-valeur">Praticien·nes du corps</span>
+        <p>Pour toutes celles et ceux qui accompagnent par le corps et les processus somatiques, et veulent individualiser leur pratique.</p>
       </div>
     </div>
     <p class="tarif">
@@ -214,16 +216,12 @@ import Layout from '../layouts/Layout.astro';
       gap: 2.5rem;
       align-items: center;
     }
-    .logo {
-      width: 130px;
-      height: auto;
-    }
     .baseline {
       color: var(--fuchsia);
       font-weight: 600;
       font-size: 1.15rem;
       font-style: italic;
-      margin: 0.4rem 0 1.6rem;
+      margin: 0 0 1.2rem;
     }
     h1 {
       font-size: clamp(2rem, 5vw, 3.1rem);
@@ -359,6 +357,14 @@ import Layout from '../layouts/Layout.astro';
     .avertissement p {
       margin: 0;
       font-size: 1.02rem;
+    }
+    .en-savoir-plus {
+      margin-top: 1.4rem;
+      text-align: center;
+    }
+    .en-savoir-plus a {
+      color: var(--bleu-fonce);
+      font-weight: 600;
     }
     .deux-colonnes {
       display: grid;

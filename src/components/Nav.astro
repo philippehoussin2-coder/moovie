@@ -1,0 +1,85 @@
+---
+const chemin = Astro.url.pathname.replace(/\/$/, '') || '/';
+const liens = [
+  { href: '/', label: 'Accueil' },
+  { href: '/cest-quoi', label: 'C’est quoi Moo’vie ?' },
+  { href: '/parcours', label: 'Le parcours' },
+  { href: '/temoignages', label: 'Témoignages' },
+];
+---
+
+<nav class="nav-site">
+  <a href="/" class="nav-site-logo" aria-label="Accueil Moo'vies">
+    <img src="/images/logo-moovies-bleu.png" alt="Moo'vies" width="72" height="72" />
+  </a>
+  <div class="nav-site-liens">
+    {
+      liens.map((l) => (
+        <a href={l.href} class:list={['nav-site-lien', { actif: chemin === l.href }]}>
+          {l.label}
+        </a>
+      ))
+    }
+  </div>
+  <a href="/parcours#inscription" class="nav-site-cta">Réserver</a>
+</nav>
+
+<style>
+  .nav-site {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .nav-site-logo img {
+    width: 72px;
+    height: auto;
+    display: block;
+  }
+  .nav-site-liens {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  .nav-site-lien {
+    color: var(--gris);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-site-lien:hover {
+    background: var(--fond-doux);
+    color: var(--bleu-fonce);
+  }
+  .nav-site-lien.actif {
+    background: rgba(43, 156, 216, 0.12);
+    color: var(--bleu-fonce);
+  }
+  .nav-site-cta {
+    background: var(--fuchsia);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  @media (max-width: 640px) {
+    .nav-site {
+      justify-content: center;
+      text-align: center;
+    }
+    .nav-site-liens {
+      order: 3;
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  }
+</style>
