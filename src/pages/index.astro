@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const buildDate = new Date().toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout title="moovie — c'est en ligne 🎬">
+  <main>
+    <section class="hero">
+      <p class="badge">✅ Déployé sur Cloudflare Pages</p>
+      <h1>moovie</h1>
+      <p class="lead">
+        Ce site est construit avec <strong>Astro</strong>, hébergé sur
+        <strong>GitHub</strong>, et déployé automatiquement sur
+        <strong>Cloudflare Pages</strong> à chaque modification.
+      </p>
+      <p class="meta">Build du {buildDate}</p>
+    </section>
+
+    <section class="cards">
+      <article>
+        <h2>🚀 Déploiement auto</h2>
+        <p>Chaque <code>git push</code> déclenche un nouveau build et une mise en ligne, sans manipulation.</p>
+      </article>
+      <article>
+        <h2>🧩 Astro</h2>
+        <p>Des pages rapides en HTML, avec des composants réutilisables et un peu de JS si besoin.</p>
+      </article>
+      <article>
+        <h2>🌍 Cloudflare</h2>
+        <p>Distribué sur le réseau mondial de Cloudflare : rapide partout, gratuit pour commencer.</p>
+      </article>
+    </section>
+  </main>
+
+  <style>
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(110, 168, 254, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(110, 168, 254, 0.3);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin: 0 0 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+      background: linear-gradient(120deg, #e8ecf3, #6ea8fe);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 1rem;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      opacity: 0.7;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+    article h2 {
+      margin: 0 0 0.6rem;
+      font-size: 1.15rem;
+    }
+    article p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+    code {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.1rem 0.4rem;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+  </style>
+</Layout>
